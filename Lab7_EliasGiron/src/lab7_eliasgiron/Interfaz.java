@@ -991,7 +991,6 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void jb_ingresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_ingresarMouseClicked
         // TODO add your handling code here
-        usuarios.add(new Usuario("prueba", "123"));
         for (int i = 0; i < usuarios.size(); i++) {
             if (usuarios.get(i).getUsuario().equals(tf_usuario.getText()) && usuarios.get(i).getContrasena().equals(pf_contrasena.getText())) {
                 posicion = i;
@@ -1075,18 +1074,6 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        for (int i = 0; i < artistas.size(); i++) {
-            for (int j = 0; j < artistas.get(i).getCancionespropias().size(); j++) {
-                if (tf_cancioncreada.getText().equals(artistas.get(i).getCancionespropias().get(j).getNombre())) {
-                    DefaultListModel modelo = (DefaultListModel) jl_canciones.getModel();
-                    modelo.addElement(artistas.get(i).getCancionespropias().get(j));
-                    jl_canciones.setModel(modelo);
-                } else {
-                    JOptionPane.showMessageDialog(jd_agregarcancion, "El artista no contiene esa cancion");
-                }
-            }
-        }
-        
         Cancion c = new Cancion(tf_cancioncreada.getText(), Integer.parseInt(tf_dcancion.getText()), tf_artista.getText());
         usuarios.get(posicion).getCanciones().add(c);
         DefaultListModel modelo = (DefaultListModel) jl_canciones.getModel();
