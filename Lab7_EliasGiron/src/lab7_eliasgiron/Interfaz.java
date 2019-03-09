@@ -986,6 +986,7 @@ public class Interfaz extends javax.swing.JFrame {
             if (evt.isMetaDown()) {
                 jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
             }
+            pg_reproduccion.setValue(0);
         }
     }//GEN-LAST:event_jl_cancionesMouseClicked
 
