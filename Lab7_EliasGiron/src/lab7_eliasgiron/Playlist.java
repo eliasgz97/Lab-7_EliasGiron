@@ -2,7 +2,7 @@ package lab7_eliasgiron;
 
 import java.util.ArrayList;
 
-public class Playlist {
+public class Playlist extends Thread{
     private String nombre;
     private String genero;
     private String creacion;
