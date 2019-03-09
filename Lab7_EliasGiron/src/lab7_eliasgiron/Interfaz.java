@@ -1075,7 +1075,7 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        /*for (int i = 0; i < artistas.size(); i++) {
+        for (int i = 0; i < artistas.size(); i++) {
             for (int j = 0; j < artistas.get(i).getCancionespropias().size(); j++) {
                 if (tf_cancioncreada.getText().equals(artistas.get(i).getCancionespropias().get(j).getNombre())) {
                     DefaultListModel modelo = (DefaultListModel) jl_canciones.getModel();
@@ -1086,7 +1086,7 @@ public class Interfaz extends javax.swing.JFrame {
                 }
             }
         }
-         */
+        
         Cancion c = new Cancion(tf_cancioncreada.getText(), Integer.parseInt(tf_dcancion.getText()), tf_artista.getText());
         usuarios.get(posicion).getCanciones().add(c);
         DefaultListModel modelo = (DefaultListModel) jl_canciones.getModel();
